@@ -11,6 +11,7 @@ import UIKit
 class RegistroViewController: UIViewController
 {
 
+    @IBOutlet weak var pataicon: UIImageView!
 	@IBOutlet weak var txtNombre: UITextField!
 	@IBOutlet weak var txtFechaNac: UITextField!
 	@IBOutlet weak var txtEmail: UITextField!
@@ -67,20 +68,24 @@ class RegistroViewController: UIViewController
 	fileprivate func initializeTextfields()
 	{
 		self.txtNombre.borderStyle = UITextBorderStyle.none
-		self.txtNombre.layer.addSublayer(self.getBottomBorder(tf: self.txtNombre, color: UIColor.white))
+//		self.txtNombre.layer.addSublayer(self.getBottomBorder(tf: self.txtNombre, color: UIColor.white))
 		self.txtNombre.attributedPlaceholder = self.getPlaceholder(tf: self.txtNombre)
 		self.txtNombre.delegate = self
 		
 		self.txtFechaNac.attributedPlaceholder = self.getPlaceholder(tf: self.txtFechaNac)
 		self.txtFechaNac.delegate = self
 		self.txtFechaNac.borderStyle = UITextBorderStyle.none
-		self.txtFechaNac.layer.addSublayer(self.getBottomBorder(tf: self.txtFechaNac, color: UIColor.white))
+//		self.txtFechaNac.layer.addSublayer(self.getBottomBorder(tf: self.txtFechaNac, color: UIColor.white))
 		
 		self.txtEmail.attributedPlaceholder = self.getPlaceholder(tf: self.txtEmail)
 		self.txtEmail.delegate = self
 		self.txtEmail.borderStyle = UITextBorderStyle.none
-		self.txtEmail.layer.addSublayer(self.getBottomBorder(tf: self.txtEmail, color: UIColor.white))
+//		self.txtEmail.layer.addSublayer(self.getBottomBorder(tf: self.txtEmail, color: UIColor.white))
+        
+        self.imageView.layer.cornerRadius = imageView.frame.size.width/2
+        self.imageView.layer.masksToBounds = true
 	}
+    
 	fileprivate func getBottomBorder(tf: UITextField, color: UIColor) -> CALayer
 	{
 		let bottomLine = CALayer()
@@ -162,6 +167,7 @@ class RegistroViewController: UIViewController
 		self.txtFechaNac.text = date
 		self.datePicker.isHidden = true
 		self.listoButton.isHidden = true
+        self.pataicon.isHidden = false
 		self.registrarButton.isHidden = false
 	}
 }
@@ -186,12 +192,14 @@ extension RegistroViewController: UITextFieldDelegate
 		{
 			self.datePicker.isHidden = false
 			self.listoButton.isHidden = false
+            self.pataicon.isHidden = true
 			self.registrarButton.isHidden = true
 			self.view.endEditing(true)
 			return false
 		}
 		else
 		{
+            self.pataicon.isHidden = false
 			self.datePicker.isHidden = true
 			self.listoButton.isHidden = true
 			self.registrarButton.isHidden = false

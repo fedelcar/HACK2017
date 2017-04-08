@@ -21,9 +21,7 @@ class LoginPageViewController: UIPageViewController
 		delegate = self
 		
 		let vc1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Slide1ViewController")
-		let vc2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Slide2ViewController")
-		let vc3 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Slide3ViewController")
-		orderedViewControllers.append(contentsOf: [vc1, vc2, vc3])
+		orderedViewControllers.append(contentsOf: [vc1])
 		
 		loginDelegate?.loginPageViewController(loginPageViewController: self, didUpdatePageCount: orderedViewControllers.count)
 		

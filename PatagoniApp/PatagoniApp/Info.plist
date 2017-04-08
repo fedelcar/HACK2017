@@ -2,20 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>PatagoniApp necesita acceder a la cámara</string>
 	<key> Privacy - Camera Usage Description</key>
 	<string>PatagoniApp necesita acceder a la cámara</string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>CFBundleDisplayName</key>
-	<false/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>PatagoniApp necesita acceder a la cámara</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Patagonia 2020</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -30,8 +22,14 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>PatagoniApp necesita acceder a la cámara</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>PatagoniApp necesita acceder a la cámara</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -46,5 +44,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

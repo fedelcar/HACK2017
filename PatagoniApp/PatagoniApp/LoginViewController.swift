@@ -12,7 +12,6 @@ class LoginViewController: UIViewController
 {
 	
 	@IBOutlet weak var containerView: UIView!
-	@IBOutlet weak var pageControl: UIPageControl!
 	@IBOutlet weak var registroButton: UIButton!
 	
 	
@@ -32,6 +31,10 @@ class LoginViewController: UIViewController
 			pageViewController.loginDelegate = self
 		}		
 	}
+    override func viewWillAppear(_ animated: Bool)
+    {
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+    }
 
 	func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle
 	{
@@ -47,11 +50,11 @@ extension LoginViewController: LoginPageViewControllerDelegate
 	
 	func loginPageViewController(loginPageViewController: LoginPageViewController, didUpdatePageCount count: Int)
 	{
-		self.pageControl.numberOfPages = count
+//		self.pageControl.numberOfPages = count
 	}
 	
 	func loginPageViewController(loginPageViewController: LoginPageViewController, didUpdatePageIndex index: Int)
 	{
-		self.pageControl.currentPage = index
+//		self.pageControl.currentPage = index
 	}
 }
