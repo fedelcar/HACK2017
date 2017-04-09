@@ -34,6 +34,11 @@ class RegistroViewController: UIViewController
 		self.mainView.addGestureRecognizer(gesture)
 		
     }
+	override func viewDidLayoutSubviews()
+	{
+		imageView.layer.cornerRadius = imageView.frame.size.width/2
+		imageView.layer.masksToBounds = true
+	}
 	override func viewWillAppear(_ animated: Bool)
 	{
 		UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
@@ -81,9 +86,6 @@ class RegistroViewController: UIViewController
 		self.txtEmail.delegate = self
 		self.txtEmail.borderStyle = UITextBorderStyle.none
 //		self.txtEmail.layer.addSublayer(self.getBottomBorder(tf: self.txtEmail, color: UIColor.white))
-        
-        self.imageView.layer.cornerRadius = imageView.frame.size.width/2
-        self.imageView.layer.masksToBounds = true
 	}
     
 	fileprivate func getBottomBorder(tf: UITextField, color: UIColor) -> CALayer
@@ -177,7 +179,7 @@ extension RegistroViewController: UIImagePickerControllerDelegate, UINavigationC
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
 	{
 		if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-			self.imageView.contentMode = .scaleAspectFit
+			self.imageView.contentMode = .scaleAspectFill
 			self.imageView.image = pickedImage
 		}
 		dismiss(animated:true, completion: nil)

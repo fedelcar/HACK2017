@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e0T-fm-hXh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e0T-fm-hXh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -98,7 +98,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nombre y Apellido" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iUC-gt-8rW">
-                                        <rect key="frame" x="20" y="39" width="187.5" height="30"/>
+                                        <rect key="frame" x="20" y="39" width="225" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="E7i-mz-2xn"/>
                                         </constraints>
@@ -107,7 +107,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Fecha de Nacimiento" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGt-or-J00">
-                                        <rect key="frame" x="20" y="84" width="187.5" height="30"/>
+                                        <rect key="frame" x="20" y="84" width="225" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="AXS-LG-nzW"/>
                                         </constraints>
@@ -116,7 +116,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-KM-7DP">
-                                        <rect key="frame" x="20" y="129" width="187.5" height="30"/>
+                                        <rect key="frame" x="20" y="129" width="225" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="DaE-Ol-Ebq"/>
                                         </constraints>
@@ -178,10 +178,22 @@
                                             <!--2017-04-08 15:54:08 +0000-->
                                         </date>
                                     </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Al registrarme declaro que soy mayor de 18 años" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc2-yf-YwC">
+                                        <rect key="frame" x="8" y="551" width="359" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="359" id="3cW-VB-kJc"/>
+                                            <constraint firstAttribute="height" constant="21" id="f4l-jz-8q0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="8xO-y3-t4J" firstAttribute="top" secondItem="Zc2-yf-YwC" secondAttribute="bottom" constant="8" id="0mP-WK-j7c"/>
                                     <constraint firstItem="0QW-td-lEx" firstAttribute="centerX" secondItem="vQd-qG-Pii" secondAttribute="centerX" id="154-6G-MS1"/>
                                     <constraint firstItem="FGt-or-J00" firstAttribute="top" secondItem="iUC-gt-8rW" secondAttribute="bottom" constant="15" id="4PH-Bo-PCD"/>
+                                    <constraint firstItem="Zc2-yf-YwC" firstAttribute="centerX" secondItem="vQd-qG-Pii" secondAttribute="centerX" id="4r9-pq-hCf"/>
                                     <constraint firstAttribute="trailing" secondItem="a9U-uv-CdS" secondAttribute="trailing" id="83g-xY-CU1"/>
                                     <constraint firstItem="8xO-y3-t4J" firstAttribute="centerY" secondItem="1Ls-dk-FiU" secondAttribute="centerY" id="BRa-IX-vkU"/>
                                     <constraint firstItem="8xO-y3-t4J" firstAttribute="height" secondItem="1Ls-dk-FiU" secondAttribute="height" id="Djd-dH-CdI"/>
@@ -196,7 +208,7 @@
                                     <constraint firstItem="ndn-KM-7DP" firstAttribute="width" secondItem="FGt-or-J00" secondAttribute="width" id="Xhb-70-anc"/>
                                     <constraint firstItem="1Ls-dk-FiU" firstAttribute="centerX" secondItem="vQd-qG-Pii" secondAttribute="centerX" id="Xoa-ZX-8by"/>
                                     <constraint firstItem="8xO-y3-t4J" firstAttribute="centerX" secondItem="vQd-qG-Pii" secondAttribute="centerX" id="ZZh-rW-LcD"/>
-                                    <constraint firstItem="iUC-gt-8rW" firstAttribute="width" secondItem="vQd-qG-Pii" secondAttribute="width" multiplier="0.5" id="a13-HV-C3G"/>
+                                    <constraint firstItem="iUC-gt-8rW" firstAttribute="width" secondItem="vQd-qG-Pii" secondAttribute="width" multiplier="0.6" id="a13-HV-C3G"/>
                                     <constraint firstAttribute="bottom" secondItem="a9U-uv-CdS" secondAttribute="bottom" constant="87" id="aIB-7x-Dtr"/>
                                     <constraint firstItem="Ue8-q2-lbP" firstAttribute="centerX" secondItem="a9U-uv-CdS" secondAttribute="centerX" id="bk0-0a-tJS"/>
                                     <constraint firstItem="FGt-or-J00" firstAttribute="width" secondItem="iUC-gt-8rW" secondAttribute="width" id="dMY-m3-nH5"/>
@@ -353,7 +365,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foto 2" translatesAutoresizingMaskIntoConstraints="NO" id="tNi-1L-dv2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:tsm-hn-aQS:image" translatesAutoresizingMaskIntoConstraints="NO" id="tsm-hn-aQS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1BA21341-BD93-4238-98B5-40FECF12B424" translatesAutoresizingMaskIntoConstraints="NO" id="tsm-hn-aQS">
                                 <rect key="frame" x="67" y="28" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -433,13 +445,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="QrCode" width="177" height="177"/>
-        <image name="camera" width="128" height="128"/>
-        <image name="emptyUser" width="225" height="225"/>
-        <image name="fondo" width="1528" height="2668"/>
-        <image name="foto 2" width="963" height="1294"/>
-        <image name="icon" width="144" height="66"/>
-        <image name="imageView:tsm-hn-aQS:image" width="144" height="66">
+        <image name="1BA21341-BD93-4238-98B5-40FECF12B424" width="144" height="66">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -1124,6 +1130,12 @@ RJ5JnlGeVJ5ZnmiebJ5znnueiJ6Nno+ekZ6Wnp6eoZ6mnq6esZ7DnsaeywAAAAAAAAIBAAAAAAAAAEEA
 AAAAAAAAAAAAAAAAAJ7NA
 </mutableData>
         </image>
+        <image name="QrCode" width="177" height="177"/>
+        <image name="camera" width="128" height="128"/>
+        <image name="emptyUser" width="225" height="225"/>
+        <image name="fondo" width="1528" height="2668"/>
+        <image name="foto 2" width="963" height="1294"/>
+        <image name="icon" width="144" height="66"/>
         <image name="slide2" width="397" height="609"/>
         <image name="slide3" width="397" height="609"/>
     </resources>
